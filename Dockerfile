@@ -4,7 +4,7 @@ ARG TERRAFORM=1.1.6
 
 
 RUN echo -e "http://nl.alpinelinux.org/alpine/v3.5/main\nhttp://nl.alpinelinux.org/alpine/v3.5/community" > /etc/apk/repositories && apk add --update ca-certificates 
-RUN apk add --update wget curl zip && \
+RUN apk add --update wget curl zip tar && \
     rm -rf /var/cache/apk/*
 
 RUN wget https://github.com/civo/cli/releases/download/v1.22.0/civo-1.22.0-linux-amd64.tar.gz -O - | tar -xz 
