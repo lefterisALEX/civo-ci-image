@@ -7,7 +7,7 @@ RUN echo -e "http://nl.alpinelinux.org/alpine/v3.5/main\nhttp://nl.alpinelinux.o
 RUN apk add --update wget curl zip tar && \
     rm -rf /var/cache/apk/*
 
-RUN wget https://github.com/civo/cli/releases/download/v1.22.0/civo-1.22.0-linux-amd64.tar.gz 
+RUN wget https://github.com/civo/cli/releases/download/v1.0.22/civo-1.0.22-linux-amd64.tar.gz
 RUN tar -xzvf civo-1.22.0-linux-amd64.tar.gz 
 RUN mv civo /usr/local/bin/  
 RUN chmod +x  /usr/local/bin/civo 
